@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: student-dashboard-service
+spec:
+  selector:
+    app: student-dashboard
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8083
+      targetPort: 8083
+      nodePort: 31083
